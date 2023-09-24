@@ -1,11 +1,11 @@
-package study.kotlinspringplayground
+package study.concurrency
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class KotlinSpringPlaygroundApplication
+class ConcurrencyApplication
 
 fun main(args: Array<String>) {
-	runApplication<KotlinSpringPlaygroundApplication>(*args)
+    runApplication<ConcurrencyApplication>(*args)
 }
