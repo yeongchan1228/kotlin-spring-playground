@@ -26,6 +26,11 @@ class PostLikeController(
     fun increasePostLike(
         @PathVariable("postLikeId") postLikeId: Long,
     ): ResponseEntity<Void> {
+//        poseLikeService.increase(postLikeId)
+//        optimisticLockPostLikeService.increase(postLikeId)
+//        pessimisticLockPostLikeService.increase(postLikeId)
+//        namedLockPostLikeFacade.increase(postLikeId)
+//        lettuceLockPostLikeFacade.increase(postLikeId)
         redissonLockPostLikeFacade.increase(postLikeId)
         return ResponseEntity.noContent().build()
     }
